@@ -14,14 +14,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-
-    public void follow(View view)
-    {
-        Button btn = findViewById(R.id.button);
-        User user = new User("username", "desc", 1, false);
-        follow_condition(user, btn);
-
         btn.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
@@ -51,4 +43,29 @@ public class MainActivity extends AppCompatActivity
             btn.setText("UNFOLLOW");
         }
     }
+
+    // Previously Before Changes
+    /*public void follow(View view)
+    {
+        Button btn = findViewById(R.id.button);
+        User user = new User("username", "desc", 1, false);
+        follow_condition(user, btn);
+
+        btn.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                // Perform action on click
+                if (!user.followed)
+                {
+                    user.followed = true;
+                }
+                else
+                {
+                    user.followed = false;
+                }
+                follow_condition(user, btn);
+            }
+        });
+    }*/
 }

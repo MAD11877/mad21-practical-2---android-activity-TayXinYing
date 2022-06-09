@@ -14,6 +14,11 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        Button btn = findViewById(R.id.button);
+        User user = new User("username", "desc", 1, false);
+        follow_condition(user, btn);
+        
         btn.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
